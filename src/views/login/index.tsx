@@ -1,6 +1,5 @@
 import { useActor } from "@xstate/react"
 import Loader from "portal-frontend-sdk/dist/components/Loader"
-import { Router, setRouter } from "portal-frontend-sdk/dist/utils/router"
 import React from "react"
 import { useNavigate } from "react-router-dom"
 
@@ -15,14 +14,6 @@ const App: React.FC = () => {
 
   const globalServices = React.useContext(GlobalStateContext)
   const [currentUser] = useActor(globalServices.currentUserService)
-
-  React.useEffect(() => {
-    setRouter(new Router({ navigate }))
-  }, [])
-
-  if (currentUser.matches("currentUserFetching")) {
-    return <Loader isFullScreen />
-  }
 
   if (currentUser.matches("loggedIn")) {
     navigate("/profile")

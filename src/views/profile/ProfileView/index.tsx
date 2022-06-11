@@ -2,7 +2,7 @@ import Tabs from "antd/lib/tabs"
 import React from "react"
 import { useSearchParams } from "react-router-dom"
 
-import ProfileHeader from "#components/ProfileHeader"
+import ProfileHeader from "#views/profile/components/ProfileHeader"
 
 import AchievementsTabContent from "./AchievementsTabContent"
 import InformationTabContent from "./InformationTabContent"
@@ -20,10 +20,7 @@ const ProfileView: React.FC = () => {
   return (
     <>
       <ProfileHeader isLinkToSettingsShown />
-      <Tabs
-        defaultActiveKey={tabSlugFromUrl}
-        onChange={(tabSlug) => setSearchParams({ tab: tabSlug })}
-      >
+      <Tabs defaultActiveKey={tabSlugFromUrl} onChange={(tabSlug) => setSearchParams({ tab: tabSlug })}>
         <Tabs.TabPane key="information" tab="Information">
           <InformationTabContent />
         </Tabs.TabPane>

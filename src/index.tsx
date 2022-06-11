@@ -1,7 +1,6 @@
 import "portal-frontend-sdk/dist/styles"
 import React from "react"
-// import ReactDOM from
-import * as ReactDOM from "react-dom/client"
+import ReactDOM from "react-dom/client"
 import { BrowserRouter } from "react-router-dom"
 
 import { GlobalStateContextProvider } from "#machines/GlobalStateContext"

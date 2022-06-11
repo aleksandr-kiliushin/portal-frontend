@@ -8,8 +8,8 @@ import RowLabel from "portal-frontend-sdk/dist/components/RowLabel"
 import React from "react"
 import { useNavigate } from "react-router-dom"
 
-import ProfileHeader from "#components/ProfileHeader"
 import GlobalStateContext from "#machines/GlobalStateContext"
+import ProfileHeader from "#views/profile/components/ProfileHeader"
 
 import classes from "./index.module.css"
 
@@ -36,7 +36,7 @@ const ProfileSettings: React.FC = () => {
       }).then((response) => response.json())
 
       sendCurrentUserEvent("UPDATE_CURRENT_USER")
-      navigate("/")
+      navigate("/profile")
     },
   })
 
