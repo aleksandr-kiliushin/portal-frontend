@@ -1,5 +1,4 @@
 import { User } from "portal-frontend-sdk/dist/types/user"
-import getRouter from "portal-frontend-sdk/dist/utils/router"
 import { assign, createMachine } from "xstate"
 
 import fetchCurrentUser from "./fetchCurrentUser"
@@ -69,7 +68,6 @@ const currentUserMachine =
           id: "logIn",
           onDone: [
             {
-              actions: () => getRouter().navigate("/"),
               target: "currentUserFetching",
             },
           ],

@@ -2,9 +2,9 @@ import { useActor } from "@xstate/react"
 import Button from "antd/lib/button"
 import Input from "antd/lib/input"
 import { useFormik } from "formik"
-import Row from "portal-sdk-fake/dist/components/Row"
-import RowGroup from "portal-sdk-fake/dist/components/RowGroup"
-import RowLabel from "portal-sdk-fake/dist/components/RowLabel"
+import Row from "portal-frontend-sdk/dist/components/Row"
+import RowGroup from "portal-frontend-sdk/dist/components/RowGroup"
+import RowLabel from "portal-frontend-sdk/dist/components/RowLabel"
 import React from "react"
 
 import GlobalStateContext from "#machines/GlobalStateContext"
@@ -33,8 +33,8 @@ const App: React.FC = () => {
           <Input
             id="username"
             name="username"
-            type="text"
             onChange={formik.handleChange}
+            type="text"
             value={formik.values.username}
           />
         </Row>
@@ -43,8 +43,8 @@ const App: React.FC = () => {
           <Input
             id="password"
             name="password"
-            type="password"
             onChange={formik.handleChange}
+            type="password"
             value={formik.values.password}
           />
         </Row>

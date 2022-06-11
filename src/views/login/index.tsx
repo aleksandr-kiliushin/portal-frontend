@@ -1,6 +1,6 @@
 import { useActor } from "@xstate/react"
-import Loader from "portal-sdk-fake/dist/components/Loader"
-import { Router, setRouter } from "portal-sdk-fake/dist/utils/router"
+import Loader from "portal-frontend-sdk/dist/components/Loader"
+import { Router, setRouter } from "portal-frontend-sdk/dist/utils/router"
 import React from "react"
 import { useNavigate } from "react-router-dom"
 
@@ -25,7 +25,7 @@ const App: React.FC = () => {
   }
 
   if (currentUser.matches("loggedIn")) {
-    window.location.replace("http://localhost:3002")
+    navigate("/profile")
     return <Loader isFullScreen />
   }
 

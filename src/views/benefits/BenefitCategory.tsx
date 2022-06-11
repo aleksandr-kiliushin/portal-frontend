@@ -1,4 +1,4 @@
-import Loader from "portal-sdk-fake/dist/components/Loader"
+import Loader from "portal-frontend-sdk/dist/components/Loader"
 import React from "react"
 import { useParams } from "react-router-dom"
 

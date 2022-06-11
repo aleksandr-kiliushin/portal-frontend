@@ -1,10 +1,11 @@
 import "portal-frontend-sdk/dist/styles"
 import React from "react"
+// import ReactDOM from
 import * as ReactDOM from "react-dom/client"
 import { BrowserRouter } from "react-router-dom"
 
 import { GlobalStateContextProvider } from "#machines/GlobalStateContext"
-import App from "#views/index"
+import Views from "#views/index"
 
 let container = document.querySelector("#root")
 if (container === null) {
@@ -16,7 +17,7 @@ const root = ReactDOM.createRoot(container)
 root.render(
   <BrowserRouter>
     <GlobalStateContextProvider>
-      <App />
+      <Views />
     </GlobalStateContextProvider>
   </BrowserRouter>
 )

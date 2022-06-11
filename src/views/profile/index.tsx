@@ -27,8 +27,8 @@ const App: React.FC = () => {
   }
 
   if (currentUser.matches("loggedOut")) {
-    // window.location.replace("http://localhost:3001")
-    // return <Loader isFullScreen />
+    navigate("/login")
+    return <Loader isFullScreen />
   }
 
   return (

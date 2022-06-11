@@ -24,7 +24,7 @@ const ProfileHeader: React.FC<Props> = ({ isLinkToSettingsShown }) => {
         {first_name} {last_name}
       </h1>
       {isLinkToSettingsShown && (
-        <Link className={classes.linkToSettings} to="/settings">
+        <Link className={classes.linkToSettings} to="/profile/settings">
           <SettingOutlined />
         </Link>
       )}
