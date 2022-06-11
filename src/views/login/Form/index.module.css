@@ -1,0 +1,8 @@
+.form {
+  display: grid;
+  width: 280px;
+}
+
+.form button[type="submit"] {
+  margin-top: 28px;
+}
