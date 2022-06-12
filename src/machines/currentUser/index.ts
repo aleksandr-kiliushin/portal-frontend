@@ -1,5 +1,6 @@
-import { User } from "portal-frontend-sdk/dist/types/user"
 import { assign, createMachine } from "xstate"
+
+import { User } from "portal-frontend-sdk/dist/types/user"
 
 import fetchCurrentUser from "./fetchCurrentUser"
 import logIn from "./logIn"

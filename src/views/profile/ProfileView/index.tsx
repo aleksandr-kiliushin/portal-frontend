@@ -1,6 +1,11 @@
+import HomeOutlined from "@ant-design/icons/lib/icons/HomeOutlined"
+import UserOutlined from "@ant-design/icons/lib/icons/UserOutlined"
 import Tabs from "antd/lib/tabs"
 import React from "react"
-import { useSearchParams } from "react-router-dom"
+import { NavLink, useSearchParams } from "react-router-dom"
+
+import Breadcrumbs from "portal-frontend-sdk/dist/components/Breadcrumbs"
+import Main from "portal-frontend-sdk/dist/components/Main"
 
 import ProfileHeader from "#views/profile/components/ProfileHeader"
 
@@ -19,21 +24,32 @@ const ProfileView: React.FC = () => {
 
   return (
     <>
-      <ProfileHeader isLinkToSettingsShown />
-      <Tabs defaultActiveKey={tabSlugFromUrl} onChange={(tabSlug) => setSearchParams({ tab: tabSlug })}>
-        <Tabs.TabPane key="information" tab="Information">
-          <InformationTabContent />
-        </Tabs.TabPane>
-        <Tabs.TabPane key="achievements" tab="Achievements">
-          <AchievementsTabContent />
-        </Tabs.TabPane>
-        <Tabs.TabPane key="endorsements" tab="Endorsements">
-          There are no endorsements here yet
-        </Tabs.TabPane>
-        <Tabs.TabPane key="publications" tab="Publications">
-          There are no publications here yet
-        </Tabs.TabPane>
-      </Tabs>
+      <Breadcrumbs>
+        <NavLink to="/">
+          <HomeOutlined />
+        </NavLink>
+        <NavLink to="/profile">
+          <UserOutlined />
+          <span>Profile</span>
+        </NavLink>
+      </Breadcrumbs>
+      <Main>
+        <ProfileHeader isLinkToSettingsShown />
+        <Tabs defaultActiveKey={tabSlugFromUrl} onChange={(tabSlug) => setSearchParams({ tab: tabSlug })}>
+          <Tabs.TabPane key="information" tab="Information">
+            <InformationTabContent />
+          </Tabs.TabPane>
+          <Tabs.TabPane key="achievements" tab="Achievements">
+            <AchievementsTabContent />
+          </Tabs.TabPane>
+          <Tabs.TabPane key="endorsements" tab="Endorsements">
+            There are no endorsements here yet
+          </Tabs.TabPane>
+          <Tabs.TabPane key="publications" tab="Publications">
+            There are no publications here yet
+          </Tabs.TabPane>
+        </Tabs>
+      </Main>
     </>
   )
 }

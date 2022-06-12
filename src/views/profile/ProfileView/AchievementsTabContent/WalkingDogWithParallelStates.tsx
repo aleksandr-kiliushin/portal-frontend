@@ -129,9 +129,7 @@ const WalkingDogWithParallelStates: React.FC = () => {
           <button onClick={() => send("START_WAGGING")}>START_WAGGING</button>
         </p>
       )}
-      {state.matches("walking") && (
-        <button onClick={() => send("COMPLETE_THE_WALK")}>Complete the walk</button>
-      )}
+      {state.matches("walking") && <button onClick={() => send("COMPLETE_THE_WALK")}>Complete the walk</button>}
       {state.matches("walkIsCompleted") && <p>The walk has been completed.</p>}
     </>
   )

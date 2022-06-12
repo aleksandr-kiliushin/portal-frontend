@@ -11,11 +11,7 @@ const GlobalStateContext = React.createContext({
 export const GlobalStateContextProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
   const currentUserService = useInterpret(currentUserMachine)
 
-  return (
-    <GlobalStateContext.Provider value={{ currentUserService }}>
-      {children}
-    </GlobalStateContext.Provider>
-  )
+  return <GlobalStateContext.Provider value={{ currentUserService }}>{children}</GlobalStateContext.Provider>
 }
 
 export default GlobalStateContext

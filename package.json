@@ -44,7 +44,11 @@
   "scripts": {
     "build": "rm -rf dist && MODE=production webpack",
     "check-types": "tsc --noEmit",
-    "dev": "MODE=development npx webpack serve"
+    "dev": "MODE=development npx webpack serve",
+    "lint": "eslint src",
+    "prepare": "rm -rf dist && rollup -c",
+    "prettier": "prettier --write 'src/**/*.{css,ts,tsx}'",
+    "test": "jest"
   },
   "version": "1.0.0"
 }

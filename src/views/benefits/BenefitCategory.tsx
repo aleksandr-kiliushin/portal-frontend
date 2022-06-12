@@ -1,6 +1,7 @@
-import Loader from "portal-frontend-sdk/dist/components/Loader"
 import React from "react"
 import { useParams } from "react-router-dom"
+
+import Loader from "portal-frontend-sdk/dist/components/Loader"
 
 type Benefit = {
   company: {

@@ -1,8 +1,9 @@
 import { useActor } from "@xstate/react"
+import React from "react"
+
 import Row from "portal-frontend-sdk/dist/components/Row"
 import RowGroup from "portal-frontend-sdk/dist/components/RowGroup"
 import RowLabel from "portal-frontend-sdk/dist/components/RowLabel"
-import React from "react"
 
 import GlobalStateContext from "#machines/GlobalStateContext"
 
