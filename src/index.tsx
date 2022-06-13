@@ -11,6 +11,7 @@ let container = document.querySelector("#root")
 if (container === null) {
   container = document.createElement("div")
   container.setAttribute("id", "root")
+  document.body.append(container)
 }
 
 const root = ReactDOM.createRoot(container)
