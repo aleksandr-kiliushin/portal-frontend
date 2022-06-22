@@ -8,7 +8,7 @@ import GlobalStateContext from "#machines/GlobalStateContext"
 import ProfileSettings from "./ProfileSettings"
 import ProfileView from "./ProfileView"
 
-const App: React.FC = () => {
+const Profile: React.FC = () => {
   const globalServices = React.useContext(GlobalStateContext)
   const [currentUser, sendCurrentUserEvent] = useActor(globalServices.currentUserService)
 
@@ -26,4 +26,4 @@ const App: React.FC = () => {
   )
 }
 
-export default App
+export default Profile

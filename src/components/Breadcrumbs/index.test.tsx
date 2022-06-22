@@ -5,7 +5,7 @@ import { screen } from "@testing-library/react"
 import React from "react"
 import { NavLink } from "react-router-dom"
 
-import render from "#mocks/render"
+import render from "#utils/testing/render"
 
 import Breadcrumbs from "./index"
 

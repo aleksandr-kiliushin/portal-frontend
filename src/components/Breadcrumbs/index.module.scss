@@ -3,6 +3,7 @@
   position: fixed;
   top: var(--page-header-height);
   width: 100vw;
+  min-height: 39px;
   background-color: white;
   border-bottom: 1px solid rgba(130, 130, 130, 0.15);
 }
