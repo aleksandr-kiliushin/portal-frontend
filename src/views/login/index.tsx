@@ -2,8 +2,7 @@ import { useActor } from "@xstate/react"
 import React from "react"
 import { useNavigate } from "react-router-dom"
 
-import Loader from "portal-frontend-sdk/dist/components/Loader"
-
+import Loader from "#components/Loader"
 import GlobalStateContext from "#machines/GlobalStateContext"
 
 import Form from "./Form"

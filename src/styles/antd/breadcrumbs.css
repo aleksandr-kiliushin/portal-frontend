@@ -1,0 +1,20 @@
+.ant-breadcrumb {
+  padding: 8px 20px;
+}
+
+.ant-breadcrumb a {
+  color: var(--gray-main);
+}
+
+.ant-breadcrumb a:hover {
+  color: var(--primary-main);
+}
+
+.ant-breadcrumb li:last-child a {
+  color: var(--dark);
+  pointer-events: none;
+}
+
+.ant-breadcrumb-link [role="img"]:not(:last-child) {
+  margin-right: 4px;
+}

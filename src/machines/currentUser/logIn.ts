@@ -1,6 +1,6 @@
 import cookie from "cookie"
 
-import { User } from "portal-frontend-sdk/dist/types/user"
+import { User } from "#types/user"
 
 const logIn = async ({ username }: { username: User["username"] }) => {
   const response = await fetch("/api/login/", {

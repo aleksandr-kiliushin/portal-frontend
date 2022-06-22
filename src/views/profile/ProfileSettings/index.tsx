@@ -9,11 +9,10 @@ import { useFormik } from "formik"
 import React from "react"
 import { NavLink, useNavigate } from "react-router-dom"
 
-import Breadcrumbs from "portal-frontend-sdk/dist/components/Breadcrumbs"
-import Main from "portal-frontend-sdk/dist/components/Main"
-import Row from "portal-frontend-sdk/dist/components/Row"
-import RowLabel from "portal-frontend-sdk/dist/components/RowLabel"
-
+import Breadcrumbs from "#components/Breadcrumbs"
+import Main from "#components/Main"
+import Row from "#components/Row"
+import RowLabel from "#components/RowLabel"
 import GlobalStateContext from "#machines/GlobalStateContext"
 import ProfileHeader from "#views/profile/components/ProfileHeader"
 

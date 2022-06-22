@@ -1,0 +1,14 @@
+.ant-input {
+  border-color: var(--gray-light);
+  color: var(--dark);
+}
+
+.ant-input:hover {
+  border-color: var(--primary-main);
+}
+
+.ant-input:focus,
+.ant-input-focused {
+  border-color: var(--primary-main);
+  box-shadow: none;
+}

@@ -4,9 +4,8 @@ import Tabs from "antd/lib/tabs"
 import React from "react"
 import { NavLink, useSearchParams } from "react-router-dom"
 
-import Breadcrumbs from "portal-frontend-sdk/dist/components/Breadcrumbs"
-import Main from "portal-frontend-sdk/dist/components/Main"
-
+import Breadcrumbs from "#components/Breadcrumbs"
+import Main from "#components/Main"
 import ProfileHeader from "#views/profile/components/ProfileHeader"
 
 import AchievementsTabContent from "./AchievementsTabContent"

@@ -1,0 +1,8 @@
+.breadcrumbs {
+  z-index: 1;
+  position: fixed;
+  top: var(--page-header-height);
+  width: 100vw;
+  background-color: white;
+  border-bottom: 1px solid rgba(130, 130, 130, 0.15);
+}

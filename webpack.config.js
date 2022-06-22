@@ -62,16 +62,10 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      // Fixes issues while local development with `npm link`
-      // such as multiple `react` versions in one app app,
-      // or losing context because of imports from different `react-router-dom` modules.
-      react: path.resolve("./node_modules/react"),
-      "react-dom": path.resolve("./node_modules/react-dom"),
-      "react-router-dom": path.resolve("./node_modules/react-router-dom"),
-      antd: path.resolve("./node_modules/antd"),
-
       "#components": path.resolve(process.cwd(), "src/components"),
       "#machines": path.resolve(process.cwd(), "src/machines"),
+      "#mocks": path.resolve(process.cwd(), "src/mocks"),
+      "#styles": path.resolve(process.cwd(), "src/styles"),
       "#utils": path.resolve(process.cwd(), "src/utils"),
       "#views": path.resolve(process.cwd(), "src/views"),
     },

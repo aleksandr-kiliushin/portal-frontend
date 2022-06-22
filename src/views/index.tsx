@@ -2,10 +2,9 @@ import { useActor } from "@xstate/react"
 import React from "react"
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom"
 
-import Loader from "portal-frontend-sdk/dist/components/Loader"
-import { Router, setRouter } from "portal-frontend-sdk/dist/utils/router"
-
+import Loader from "#components/Loader"
 import GlobalStateContext from "#machines/GlobalStateContext"
+import { Router, setRouter } from "#utils/router"
 
 import Benefits from "./benefits"
 import Login from "./login"

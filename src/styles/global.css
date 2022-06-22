@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  font-family: var(--font-family-primary);
+}
+
+html {
+  color: var(--dark);
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  color: var(--dark);
+}
+
+a {
+  color: var(--dark);
+}
+
+a:hover {
+  color: var(--primary-main);
+}

@@ -1,0 +1,12 @@
+:root {
+  --page-header-height: 68px;
+  --page-breadcrumbs-height: 39px;
+
+  --dark: #333;
+  --gray-main: gray;
+  --gray-light: lightgray;
+  --primary-main: royalblue;
+  --primary-light: #6a8df7;
+
+  --font-family-primary: Tahoma, Verdana, Geneva, sans-serif;
+}

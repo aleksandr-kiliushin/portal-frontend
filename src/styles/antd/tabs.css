@@ -1,0 +1,21 @@
+.ant-tabs-tab-btn {
+  color: var(--dark);
+  font-family: var(--font-family-primary);
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: var(--dark);
+}
+
+.ant-tabs-tab.ant-tabs-tab-active {
+  cursor: default;
+  pointer-events: none;
+}
+
+.ant-tabs-ink-bar {
+  background-color: var(--primary-main);
+}
+
+.ant-tabs-tab:hover .ant-tabs-tab-btn {
+  color: var(--primary-main);
+}

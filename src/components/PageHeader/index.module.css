@@ -1,0 +1,23 @@
+.pageHeader {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--page-header-height);
+  width: 100vw;
+  padding: 14px 20px;
+  border-bottom: 1px solid rgba(130, 130, 130, 0.15);
+  background-color: white;
+}
+
+.linkToHome {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: serif, Helvetica;
+}
+
+.username {
+  margin-right: 8px;
+}

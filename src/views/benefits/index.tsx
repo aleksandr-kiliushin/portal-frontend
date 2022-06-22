@@ -2,10 +2,9 @@ import { useActor } from "@xstate/react"
 import React from "react"
 import { Route, Routes } from "react-router-dom"
 
-import Breadcrumbs from "portal-frontend-sdk/dist/components/Breadcrumbs"
-import Main from "portal-frontend-sdk/dist/components/Main"
-import PageHeader from "portal-frontend-sdk/dist/components/PageHeader"
-
+import Breadcrumbs from "#components/Breadcrumbs"
+import Main from "#components/Main"
+import PageHeader from "#components/PageHeader"
 import GlobalStateContext from "#machines/GlobalStateContext"
 
 import BenefitCategories from "./BenefitCategories"
