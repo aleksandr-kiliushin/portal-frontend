@@ -9,7 +9,7 @@ import RowGroup from "#components/RowGroup"
 import RowLabel from "#components/RowLabel"
 import GlobalStateContext from "#machines/GlobalStateContext"
 
-import classes from "./index.module.css"
+import classes from "./index.module.scss"
 
 const App: React.FC = () => {
   const globalServices = React.useContext(GlobalStateContext)

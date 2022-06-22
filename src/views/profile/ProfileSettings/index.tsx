@@ -16,7 +16,7 @@ import RowLabel from "#components/RowLabel"
 import GlobalStateContext from "#machines/GlobalStateContext"
 import ProfileHeader from "#views/profile/components/ProfileHeader"
 
-import classes from "./index.module.css"
+import classes from "./index.module.scss"
 
 const ProfileSettings: React.FC = () => {
   const navigate = useNavigate()

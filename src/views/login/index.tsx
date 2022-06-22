@@ -6,8 +6,7 @@ import Loader from "#components/Loader"
 import GlobalStateContext from "#machines/GlobalStateContext"
 
 import Form from "./Form"
-
-import classes from "./index.module.css"
+import classes from "./index.module.scss"
 
 const App: React.FC = () => {
   const navigate = useNavigate()

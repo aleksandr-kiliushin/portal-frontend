@@ -1,7 +1,7 @@
 import cx from "classnames"
 import React from "react"
 
-import classes from "./index.module.css"
+import classes from "./index.module.scss"
 
 type Props = {
   className?: string

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 
 import GlobalStateContext from "#machines/GlobalStateContext"
 
-import classes from "./index.module.css"
+import classes from "./index.module.scss"
 
 type Props = {
   isLinkToSettingsShown?: boolean

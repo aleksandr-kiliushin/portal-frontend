@@ -1,7 +1,7 @@
 {
   "arrowParens": "always",
   "bracketSpacing": true,
-  "importOrder": ["^portal-frontend-sdk", "^#", "\\.\\/(?!.+\\.css)", "\\.css$"],
+  "importOrder": ["^#", "\\.\\/(?!.+\\.scss)", "\\.scss$"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
   "jsxBracketSameLine": false,
