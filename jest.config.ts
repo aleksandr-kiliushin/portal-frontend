@@ -8,6 +8,7 @@ const config = {
     "^#views(.*)$": "<rootDir>/src/views$1",
   },
   modulePathIgnorePatterns: ["<rootDir>/dist"],
+  setupFilesAfterEnv: ["./jest.setup.ts"],
   testEnvironment: "jsdom", // TODO: If will be any errors, try 'jest-environment-jsdom'.
 }
 

@@ -1,8 +1,7 @@
-import { fireEvent, screen, waitFor } from "@testing-library/react"
+import { fireEvent, screen } from "@testing-library/react"
 import React from "react"
 import { act } from "react-dom/test-utils"
 import { MemoryRouter, Route, Routes } from "react-router-dom"
-import "whatwg-fetch"
 
 import render from "#utils/testing/render"
 
