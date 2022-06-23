@@ -9,13 +9,12 @@ import render from "#utils/testing/render"
 import ProfileSettings from "./ProfileSettings"
 import ProfileView from "./ProfileView"
 
-const createFetchErrorResponse = ({ body, status }: { body: any; status: number }) => {
+export const createFetchSuccessfulResponse = (body?: unknown) => {
   return Promise.resolve({
     async json() {
       return Promise.resolve(body)
     },
-    ok: false,
-    status,
+    ok: true,
   })
 }
 
@@ -23,16 +22,13 @@ describe("Profile", () => {
   beforeEach(() => {
     jest.spyOn(globalThis, "fetch").mockReturnValue(
       // @ts-ignore
-      createFetchErrorResponse({
-        body: {
-          activity_field: "Занимаюсь разработкой корпоративного портала!",
-          first_name: "Александр",
-          id: 1502417,
-          last_name: "Килюшин",
-          post: "Инженер-разработчик клиентских приложений",
-          username: "a.kilyushin",
-        },
-        status: 200,
+      createFetchSuccessfulResponse({
+        activity_field: "Занимаюсь разработкой корпоративного портала!",
+        first_name: "Александр",
+        id: 1502417,
+        last_name: "Килюшин",
+        post: "Инженер-разработчик клиентских приложений",
+        username: "a.kilyushin",
       })
     )
   })
@@ -67,5 +63,7 @@ describe("Profile", () => {
       fireEvent.click(submitButton)
     })
     expect(screen.queryByText("Компания")).toBeInTheDocument()
+    console.log((fetch as jest.Mock).mock)
+    // ;(fetch as jest.Mock).mock.results[0].value.then((response) => response.json()).then(console.log)
   })
 })
