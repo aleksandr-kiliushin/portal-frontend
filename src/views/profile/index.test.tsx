@@ -53,13 +53,9 @@ describe("Profile", () => {
         </Routes>
       </MemoryRouter>
     )
-    await waitFor(async () => {
-      fireEvent.click(screen.getByRole("link", { name: "settings" }))
-    })
-    await act(async () => {
-      fireEvent.change(screen.getByRole("textbox", { name: "Направление деятельности" }), {
-        target: { value: newActivityFieldValue },
-      })
+    fireEvent.click(screen.getByRole("link", { name: "settings" }))
+    fireEvent.change(screen.getByRole("textbox", { name: "Направление деятельности" }), {
+      target: { value: newActivityFieldValue },
     })
     await act(async () => {
       fireEvent.click(screen.getByRole("button", { name: "Save" }))
