@@ -1,5 +1,6 @@
 import { fireEvent, screen, waitFor } from "@testing-library/react"
 import React from "react"
+import { act } from "react-dom/test-utils"
 import { MemoryRouter, Route, Routes } from "react-router-dom"
 import "whatwg-fetch"
 
@@ -53,9 +54,18 @@ describe("Profile", () => {
     await waitFor(async () => {
       fireEvent.click(screen.getByRole("link", { name: "settings" }))
     })
-    await waitFor(() => {
-      expect(screen.getByRole("textbox", { name: "Направление деятельности" }))
-    })
+    const activityFieldInput = screen.getByRole("textbox", { name: "Направление деятельности" })
+    expect(activityFieldInput).toBeInTheDocument()
     expect(screen.queryByText("Компания")).not.toBeInTheDocument()
+    await act(async () => {
+      fireEvent.change(screen.getByRole("textbox", { name: "Направление деятельности" }), {
+        target: { value: "spider-man" },
+      })
+    })
+    const submitButton = screen.getByRole("button", { name: "Save" })
+    await act(async () => {
+      fireEvent.click(submitButton)
+    })
+    expect(screen.queryByText("Компания")).toBeInTheDocument()
   })
 })
