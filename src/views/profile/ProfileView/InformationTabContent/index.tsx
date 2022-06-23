@@ -18,15 +18,15 @@ export const InformationTabContent: React.FC = () => {
     <RowGroup className={classes.informationWrapper}>
       <Row>
         <RowLabel>Компания</RowLabel>
-        {company_name}
+        <span>{company_name}</span>
       </Row>
       <Row>
         <RowLabel>Позиция</RowLabel>
-        {post}
+        <span>{post}</span>
       </Row>
       <Row>
         <RowLabel>Направление деятельности</RowLabel>
-        {activity_field}
+        <span>{activity_field}</span>
       </Row>
     </RowGroup>
   )
