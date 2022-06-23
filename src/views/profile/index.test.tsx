@@ -1,6 +1,5 @@
-import { fireEvent, queryByText, screen, waitFor } from "@testing-library/react"
+import { fireEvent, screen, waitFor } from "@testing-library/react"
 import React from "react"
-import { act } from "react-dom/test-utils"
 import { MemoryRouter, Route, Routes } from "react-router-dom"
 import "whatwg-fetch"
 
@@ -42,16 +41,14 @@ describe("Profile", () => {
   })
 
   it("edits about-me section and displays saved changes in profile", async () => {
-    await act(async () => {
-      render(
-        <MemoryRouter initialEntries={["/profile"]}>
-          <Routes>
-            <Route element={<ProfileView />} path="/profile" />
-            <Route element={<ProfileSettings />} path="/profile/settings" />
-          </Routes>
-        </MemoryRouter>
-      )
-    })
+    render(
+      <MemoryRouter initialEntries={["/profile"]}>
+        <Routes>
+          <Route element={<ProfileView />} path="/profile" />
+          <Route element={<ProfileSettings />} path="/profile/settings" />
+        </Routes>
+      </MemoryRouter>
+    )
     expect(screen.getByText("Направление деятельности")).toBeInTheDocument()
     await waitFor(async () => {
       fireEvent.click(screen.getByRole("link", { name: "settings" }))
