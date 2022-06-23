@@ -18,19 +18,19 @@ export const createFetchSuccessfulResponse = (body?: unknown) => {
   })
 }
 
+const aleksandrKiliushin = {
+  activity_field: "Занимаюсь разработкой корпоративного портала!",
+  first_name: "Александр",
+  id: 1502417,
+  last_name: "Килюшин",
+  post: "Инженер-разработчик клиентских приложений",
+  username: "a.kilyushin",
+}
+
 describe("Profile", () => {
   beforeEach(() => {
-    jest.spyOn(globalThis, "fetch").mockReturnValue(
-      // @ts-ignore
-      createFetchSuccessfulResponse({
-        activity_field: "Занимаюсь разработкой корпоративного портала!",
-        first_name: "Александр",
-        id: 1502417,
-        last_name: "Килюшин",
-        post: "Инженер-разработчик клиентских приложений",
-        username: "a.kilyushin",
-      })
-    )
+    // @ts-ignore
+    jest.spyOn(globalThis, "fetch")
   })
 
   afterEach(() => {
@@ -38,6 +38,13 @@ describe("Profile", () => {
   })
 
   it("edits about-me section and displays saved changes in profile", async () => {
+    const newActivityFieldValue = "Spider-man"
+    ;(fetch as jest.Mock)
+      .mockReturnValueOnce(createFetchSuccessfulResponse(aleksandrKiliushin))
+      .mockReturnValueOnce(createFetchSuccessfulResponse())
+      .mockReturnValueOnce(
+        createFetchSuccessfulResponse({ ...aleksandrKiliushin, activity_field: newActivityFieldValue })
+      )
     render(
       <MemoryRouter initialEntries={["/profile"]}>
         <Routes>
@@ -46,24 +53,17 @@ describe("Profile", () => {
         </Routes>
       </MemoryRouter>
     )
-    expect(screen.getByText("Направление деятельности")).toBeInTheDocument()
     await waitFor(async () => {
       fireEvent.click(screen.getByRole("link", { name: "settings" }))
     })
-    const activityFieldInput = screen.getByRole("textbox", { name: "Направление деятельности" })
-    expect(activityFieldInput).toBeInTheDocument()
-    expect(screen.queryByText("Компания")).not.toBeInTheDocument()
     await act(async () => {
       fireEvent.change(screen.getByRole("textbox", { name: "Направление деятельности" }), {
-        target: { value: "spider-man" },
+        target: { value: newActivityFieldValue },
       })
     })
-    const submitButton = screen.getByRole("button", { name: "Save" })
     await act(async () => {
-      fireEvent.click(submitButton)
+      fireEvent.click(screen.getByRole("button", { name: "Save" }))
     })
-    expect(screen.queryByText("Компания")).toBeInTheDocument()
-    console.log((fetch as jest.Mock).mock)
-    // ;(fetch as jest.Mock).mock.results[0].value.then((response) => response.json()).then(console.log)
+    expect(screen.getByText(newActivityFieldValue)).toBeInTheDocument()
   })
 })
