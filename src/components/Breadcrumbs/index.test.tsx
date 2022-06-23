@@ -9,7 +9,7 @@ import render from "#utils/testing/render"
 
 import Breadcrumbs from "./index"
 
-describe("Breadcrumbs.", () => {
+describe.skip("Breadcrumbs.", () => {
   test("Breadcrumbs component renders.", async () => {
     render(
       <Breadcrumbs>
