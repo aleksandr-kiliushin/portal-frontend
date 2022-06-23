@@ -85,7 +85,7 @@ const walkingDogMachine =
     },
   })
 
-const WalkingDogWithParallelStates: React.FC = () => {
+export const WalkingDogWithParallelStates: React.FC = () => {
   const [state, send] = useMachine(walkingDogMachine)
 
   return (
@@ -134,5 +134,3 @@ const WalkingDogWithParallelStates: React.FC = () => {
     </>
   )
 }
-
-export default WalkingDogWithParallelStates

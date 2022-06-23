@@ -8,11 +8,9 @@ interface Props {
   title?: string | undefined
 }
 
-const RowGroup: React.FC<React.PropsWithChildren<Props>> = ({ children, className, title }) => (
+export const RowGroup: React.FC<React.PropsWithChildren<Props>> = ({ children, className, title }) => (
   <div className={cx(classes.rowGroup, className)}>
     {title !== undefined && title !== "" && <h4>{title}</h4>}
     {children}
   </div>
 )
-
-export default RowGroup

@@ -9,7 +9,7 @@ type BenefitCategory = {
   slug: string
 }
 
-const BenefitCategories: React.FC = () => {
+export const BenefitCategories: React.FC = () => {
   const [categories, setCategories] = React.useState<BenefitCategory[]>([])
 
   React.useEffect(() => {
@@ -28,5 +28,3 @@ const BenefitCategories: React.FC = () => {
     </div>
   )
 }
-
-export default BenefitCategories

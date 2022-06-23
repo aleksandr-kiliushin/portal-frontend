@@ -4,14 +4,14 @@ import Input from "antd/lib/input"
 import { useFormik } from "formik"
 import React from "react"
 
-import Row from "#components/Row"
-import RowGroup from "#components/RowGroup"
-import RowLabel from "#components/RowLabel"
-import GlobalStateContext from "#machines/GlobalStateContext"
+import { Row } from "#components/Row"
+import { RowGroup } from "#components/RowGroup"
+import { RowLabel } from "#components/RowLabel"
+import { GlobalStateContext } from "#machines/GlobalStateContext"
 
 import classes from "./index.module.scss"
 
-const App: React.FC = () => {
+export const Form: React.FC = () => {
   const globalServices = React.useContext(GlobalStateContext)
   const [, sendCurrentUserEvent] = useActor(globalServices.currentUserService)
 
@@ -55,5 +55,3 @@ const App: React.FC = () => {
     </form>
   )
 }
-
-export default App

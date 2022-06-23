@@ -3,10 +3,10 @@ import React from "react"
 import { act } from "react-dom/test-utils"
 import { MemoryRouter, Route, Routes } from "react-router-dom"
 
-import render from "#utils/testing/render"
+import { render } from "#utils/testing/render"
 
-import ProfileSettings from "./ProfileSettings"
-import ProfileView from "./ProfileView"
+import { ProfileSettings } from "./ProfileSettings"
+import { ProfileView } from "./ProfileView"
 
 export const createFetchSuccessfulResponse = (body?: unknown) => {
   return Promise.resolve({

@@ -103,7 +103,7 @@ const machine = createMachine<MachineContext>({
 //   return [currentState, service.send]
 // }
 
-const PaymentForm: React.FC = () => {
+export const PaymentForm: React.FC = () => {
   const [currentState, send] = useMachine(machine)
   const [formValues, setFormValues] = React.useState({ cardNumber: "", nameOnCard: "" })
 
@@ -134,5 +134,3 @@ const PaymentForm: React.FC = () => {
     </form>
   )
 }
-
-export default PaymentForm

@@ -20,8 +20,6 @@ export const setRouter = (newRouter: Router) => {
   router = newRouter
 }
 
-const getRouter = (): Router => {
+export const getRouter = (): Router => {
   return router
 }
-
-export default getRouter

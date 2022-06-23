@@ -3,7 +3,7 @@ import { useActor } from "@xstate/react"
 import React from "react"
 import { Link } from "react-router-dom"
 
-import GlobalStateContext from "#machines/GlobalStateContext"
+import { GlobalStateContext } from "#machines/GlobalStateContext"
 
 import classes from "./index.module.scss"
 
@@ -11,7 +11,7 @@ type Props = {
   isLinkToSettingsShown?: boolean
 }
 
-const ProfileHeader: React.FC<Props> = ({ isLinkToSettingsShown }) => {
+export const ProfileHeader: React.FC<Props> = ({ isLinkToSettingsShown }) => {
   const globalServices = React.useContext(GlobalStateContext)
   const [currentUser] = useActor(globalServices.currentUserService)
 
@@ -31,5 +31,3 @@ const ProfileHeader: React.FC<Props> = ({ isLinkToSettingsShown }) => {
     </div>
   )
 }
-
-export default ProfileHeader

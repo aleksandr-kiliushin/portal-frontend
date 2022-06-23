@@ -1,7 +1,7 @@
 import React from "react"
 import { useParams } from "react-router-dom"
 
-import Loader from "#components/Loader"
+import { Loader } from "#components/Loader"
 
 type Benefit = {
   company: {
@@ -16,7 +16,7 @@ type IBenefitCategory = {
   name: string
 }
 
-const BenefitCategory: React.FC = () => {
+export const BenefitCategory: React.FC = () => {
   const params = useParams<{ categorySlug: string }>()
 
   const [benefitCategory, setBenefitCategory] = React.useState<IBenefitCategory | null>(null)
@@ -37,5 +37,3 @@ const BenefitCategory: React.FC = () => {
     </>
   )
 }
-
-export default BenefitCategory

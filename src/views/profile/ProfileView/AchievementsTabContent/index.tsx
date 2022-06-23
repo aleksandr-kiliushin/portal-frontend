@@ -1,14 +1,14 @@
 import React from "react"
 
-import AsleepOrAwakeDogExample from "./AsleepOrAwakeDogExample"
-import LightExample from "./LightExample"
-import PaymentForm from "./PaymentForm"
-import PromiseExample from "./PromiseExample"
-import SimpleWalkingDog from "./SimpleWalkingDog"
-import WalkingDogWithCompoundState from "./WalkingDogWithCompoundState"
-import WalkingDogWithParallelStates from "./WalkingDogWithParallelStates"
+import { AsleepOrAwakeDogExample } from "./AsleepOrAwakeDogExample"
+import { LightExample } from "./LightExample"
+import { PaymentForm } from "./PaymentForm"
+import { PromiseExample } from "./PromiseExample"
+import { SimpleWalkingDog } from "./SimpleWalkingDog"
+import { WalkingDogWithCompoundState } from "./WalkingDogWithCompoundState"
+import { WalkingDogWithParallelStates } from "./WalkingDogWithParallelStates"
 
-const AchievementsTabContent: React.FC = () => {
+export const AchievementsTabContent: React.FC = () => {
   return (
     <>
       <details>
@@ -42,5 +42,3 @@ const AchievementsTabContent: React.FC = () => {
     </>
   )
 }
-
-export default AchievementsTabContent

@@ -7,8 +7,6 @@ interface Props {
   className?: string
 }
 
-const RowGroups: React.FC<React.PropsWithChildren<Props>> = ({ children, className }) => (
+export const RowGroups: React.FC<React.PropsWithChildren<Props>> = ({ children, className }) => (
   <div className={cx(classes.rowGroups, className)}>{children}</div>
 )
-
-export default RowGroups

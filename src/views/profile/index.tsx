@@ -2,13 +2,13 @@ import { useActor } from "@xstate/react"
 import React from "react"
 import { Route, Routes } from "react-router-dom"
 
-import PageHeader from "#components/PageHeader"
-import GlobalStateContext from "#machines/GlobalStateContext"
+import { PageHeader } from "#components/PageHeader"
+import { GlobalStateContext } from "#machines/GlobalStateContext"
 
-import ProfileSettings from "./ProfileSettings"
-import ProfileView from "./ProfileView"
+import { ProfileSettings } from "./ProfileSettings"
+import { ProfileView } from "./ProfileView"
 
-const Profile: React.FC = () => {
+export const Profile: React.FC = () => {
   const globalServices = React.useContext(GlobalStateContext)
   const [currentUser, sendCurrentUserEvent] = useActor(globalServices.currentUserService)
 
@@ -25,5 +25,3 @@ const Profile: React.FC = () => {
     </>
   )
 }
-
-export default Profile

@@ -7,8 +7,6 @@ type Props = {
   className?: string
 }
 
-const Row: React.FC<React.PropsWithChildren<Props>> = ({ children, className }) => (
+export const Row: React.FC<React.PropsWithChildren<Props>> = ({ children, className }) => (
   <div className={cx(classes.row, className)}>{children}</div>
 )
-
-export default Row

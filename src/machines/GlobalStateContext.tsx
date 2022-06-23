@@ -2,9 +2,9 @@ import { useInterpret } from "@xstate/react"
 import React from "react"
 import { InterpreterFrom } from "xstate"
 
-import currentUserMachine from "./currentUser"
+import { currentUserMachine } from "./currentUser"
 
-const GlobalStateContext = React.createContext({
+export const GlobalStateContext = React.createContext({
   currentUserService: {} as InterpreterFrom<typeof currentUserMachine>,
 })
 
@@ -13,5 +13,3 @@ export const GlobalStateContextProvider: React.FC<React.PropsWithChildren<{}>> =
 
   return <GlobalStateContext.Provider value={{ currentUserService }}>{children}</GlobalStateContext.Provider>
 }
-
-export default GlobalStateContext

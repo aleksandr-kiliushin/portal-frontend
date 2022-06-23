@@ -1,14 +1,14 @@
 import { useActor } from "@xstate/react"
 import React from "react"
 
-import Row from "#components/Row"
-import RowGroup from "#components/RowGroup"
-import RowLabel from "#components/RowLabel"
-import GlobalStateContext from "#machines/GlobalStateContext"
+import { Row } from "#components/Row"
+import { RowGroup } from "#components/RowGroup"
+import { RowLabel } from "#components/RowLabel"
+import { GlobalStateContext } from "#machines/GlobalStateContext"
 
 import classes from "./index.module.scss"
 
-const InformationTabContent: React.FC = () => {
+export const InformationTabContent: React.FC = () => {
   const globalServices = React.useContext(GlobalStateContext)
   const [currentUser] = useActor(globalServices.currentUserService)
 
@@ -31,5 +31,3 @@ const InformationTabContent: React.FC = () => {
     </RowGroup>
   )
 }
-
-export default InformationTabContent

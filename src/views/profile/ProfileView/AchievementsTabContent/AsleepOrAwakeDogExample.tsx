@@ -19,7 +19,7 @@ const dogMachine = createMachine({
   },
 })
 
-const AsleepOrAwakeDogExample: React.FC = () => {
+export const AsleepOrAwakeDogExample: React.FC = () => {
   const [state, send] = useMachine(dogMachine)
 
   return (
@@ -51,5 +51,3 @@ const AsleepOrAwakeDogExample: React.FC = () => {
     </>
   )
 }
-
-export default AsleepOrAwakeDogExample

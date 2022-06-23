@@ -4,6 +4,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 
 import { User } from "../../types/user"
+
 import classes from "./index.module.scss"
 
 type Props = {
@@ -13,7 +14,7 @@ type Props = {
   onLogoutClick(): void
 }
 
-const PageHeader: React.FC<React.PropsWithChildren<Props>> = ({ currentUserUsername, onLogoutClick }) => {
+export const PageHeader: React.FC<React.PropsWithChildren<Props>> = ({ currentUserUsername, onLogoutClick }) => {
   return (
     <div className={classes.pageHeader}>
       <Link className={classes.linkToHome} to="/profile">
@@ -35,5 +36,3 @@ const PageHeader: React.FC<React.PropsWithChildren<Props>> = ({ currentUserUsern
     </div>
   )
 }
-
-export default PageHeader

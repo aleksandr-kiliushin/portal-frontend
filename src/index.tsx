@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom"
 
 import { GlobalStateContextProvider } from "#machines/GlobalStateContext"
 import "#styles/index"
-import Views from "#views/index"
+import { Views } from "#views/index"
 
 let container = document.querySelector("#root")
 if (container === null) {

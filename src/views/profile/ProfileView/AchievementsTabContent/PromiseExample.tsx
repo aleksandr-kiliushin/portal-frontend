@@ -27,7 +27,7 @@ const promiseMachine =
     },
   })
 
-const BadgesTabContent: React.FC = () => {
+export const PromiseExample: React.FC = () => {
   const [state, send] = useMachine(promiseMachine)
 
   return (
@@ -56,5 +56,3 @@ const BadgesTabContent: React.FC = () => {
     </>
   )
 }
-
-export default BadgesTabContent

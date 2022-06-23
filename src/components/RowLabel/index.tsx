@@ -8,10 +8,8 @@ type Props = {
   htmlFor?: string
 }
 
-const RowLabel: React.FC<React.PropsWithChildren<Props>> = ({ children, className, htmlFor }) => (
+export const RowLabel: React.FC<React.PropsWithChildren<Props>> = ({ children, className, htmlFor }) => (
   <label className={cx(classes.rowLabel, className)} htmlFor={htmlFor}>
     {children}
   </label>
 )
-
-export default RowLabel

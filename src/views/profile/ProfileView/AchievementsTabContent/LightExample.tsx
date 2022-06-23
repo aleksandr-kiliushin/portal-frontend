@@ -47,7 +47,7 @@ const lightMachine = createMachine(
   }
 )
 
-const LightExample: React.FC = () => {
+export const LightExample: React.FC = () => {
   const [state, send] = useMachine(lightMachine)
 
   return (
@@ -73,5 +73,3 @@ const LightExample: React.FC = () => {
     </>
   )
 }
-
-export default LightExample

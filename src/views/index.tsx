@@ -2,15 +2,15 @@ import { useActor } from "@xstate/react"
 import React from "react"
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom"
 
-import Loader from "#components/Loader"
-import GlobalStateContext from "#machines/GlobalStateContext"
+import { Loader } from "#components/Loader"
+import { GlobalStateContext } from "#machines/GlobalStateContext"
 import { Router, setRouter } from "#utils/router"
 
-import Benefits from "./benefits"
-import Login from "./login"
-import Profile from "./profile"
+import { Benefits } from "./benefits"
+import { Login } from "./login"
+import { Profile } from "./profile"
 
-const Views: React.FC = () => {
+export const Views: React.FC = () => {
   const location = useLocation()
   const navigate = useNavigate()
 
@@ -41,5 +41,3 @@ const Views: React.FC = () => {
     </Routes>
   )
 }
-
-export default Views

@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom"
 
 import "#styles/index"
 
-import Breadcrumbs from "./index"
+import { Breadcrumbs } from "./index"
 
 export default {
   component: Breadcrumbs,

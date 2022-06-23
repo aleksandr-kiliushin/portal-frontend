@@ -9,16 +9,16 @@ import { useFormik } from "formik"
 import React from "react"
 import { NavLink, useNavigate } from "react-router-dom"
 
-import Breadcrumbs from "#components/Breadcrumbs"
-import Main from "#components/Main"
-import Row from "#components/Row"
-import RowLabel from "#components/RowLabel"
-import GlobalStateContext from "#machines/GlobalStateContext"
-import ProfileHeader from "#views/profile/components/ProfileHeader"
+import { Breadcrumbs } from "#components/Breadcrumbs"
+import { Main } from "#components/Main"
+import { Row } from "#components/Row"
+import { RowLabel } from "#components/RowLabel"
+import { GlobalStateContext } from "#machines/GlobalStateContext"
+import { ProfileHeader } from "#views/profile/components/ProfileHeader"
 
 import classes from "./index.module.scss"
 
-const ProfileSettings: React.FC = () => {
+export const ProfileSettings: React.FC = () => {
   const navigate = useNavigate()
 
   const globalServices = React.useContext(GlobalStateContext)
@@ -83,5 +83,3 @@ const ProfileSettings: React.FC = () => {
     </>
   )
 }
-
-export default ProfileSettings

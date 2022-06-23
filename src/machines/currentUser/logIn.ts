@@ -2,7 +2,7 @@ import cookie from "cookie"
 
 import { User } from "#types/user"
 
-const logIn = async ({ username }: { username: User["username"] }) => {
+export const logIn = async ({ username }: { username: User["username"] }) => {
   const response = await fetch("/api/login/", {
     body: JSON.stringify({ password: "wer", username }),
     headers: {
@@ -18,5 +18,3 @@ const logIn = async ({ username }: { username: User["username"] }) => {
 
   throw new Error("An error occured while logging in.")
 }
-
-export default logIn

@@ -4,15 +4,15 @@ import Tabs from "antd/lib/tabs"
 import React from "react"
 import { NavLink, useSearchParams } from "react-router-dom"
 
-import Breadcrumbs from "#components/Breadcrumbs"
-import Main from "#components/Main"
-import ProfileHeader from "#views/profile/components/ProfileHeader"
+import { Breadcrumbs } from "#components/Breadcrumbs"
+import { Main } from "#components/Main"
+import { ProfileHeader } from "#views/profile/components/ProfileHeader"
 
-import AchievementsTabContent from "./AchievementsTabContent"
-import InformationTabContent from "./InformationTabContent"
+import { AchievementsTabContent } from "./AchievementsTabContent"
+import { InformationTabContent } from "./InformationTabContent"
 import { isTabSlugValid } from "./helpers"
 
-const ProfileView: React.FC = () => {
+export const ProfileView: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams()
   const tabSlugFromUrl = searchParams.get("tab") ?? ""
 
@@ -52,5 +52,3 @@ const ProfileView: React.FC = () => {
     </>
   )
 }
-
-export default ProfileView

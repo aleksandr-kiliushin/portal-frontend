@@ -61,7 +61,7 @@ const walkingDogMachine =
     },
   })
 
-const WalkingDogWithCompoundState: React.FC = () => {
+export const WalkingDogWithCompoundState: React.FC = () => {
   const [state, send] = useMachine(walkingDogMachine)
 
   return (
@@ -153,5 +153,3 @@ const WalkingDogWithCompoundState: React.FC = () => {
     </div>
   )
 }
-
-export default WalkingDogWithCompoundState
